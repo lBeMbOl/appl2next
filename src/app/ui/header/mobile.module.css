@@ -1,0 +1,59 @@
+/* Базовые стили - меню скрыто по умолчанию */
+.menu {
+  display: none;
+}
+
+/* Стили для мобильного меню */
+.menuList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menuLink {
+  color: #ffffff;
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.menuLink:hover {
+  opacity: 0.7;
+}
+
+/* Показываем меню ТОЛЬКО при ширине экрана < 480px */
+@media (max-width: 760px) {
+  .menu {
+    display: block;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 2rem;
+  }
+
+  .menuList {
+    height: 100%;
+    justify-content: center;
+  }
+}
+
+/* Дополнительные стили для очень маленьких экранов */
+@media (max-width: 360px) {
+  .menuList {
+    gap: 15px;
+  }
+
+  .menuLink {
+    font-size: 1.5rem;
+  }
+}

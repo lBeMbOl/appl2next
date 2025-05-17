@@ -1,0 +1,44 @@
+.button {
+  /* Базовые стили */
+  min-width: 150px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+/* Размеры */
+.buttonSmall {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.buttonMedium {
+  padding: 12px 24px;
+  font-size: 16px;
+}
+
+.buttonLarge {
+  padding: 16px 32px;
+  font-size: 18px;
+}
+
+/* Состояния */
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button:focus {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}

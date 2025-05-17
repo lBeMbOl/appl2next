@@ -1,0 +1,57 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to right, #ffffff, #01d9fa);
+  border-radius: 50px;
+  margin: 0 50px;
+  padding-right: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  max-height: 10%;
+  z-index: 1000;
+  justify-content: space-between;
+
+  @media (max-width: 760px) {
+    display: none;
+  }
+}
+
+.menu {
+  /* Стили для контейнера меню */
+}
+
+.menuList {
+  display: flex;
+  gap: clamp(5px, 2vw, 40px);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  color: #000027;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: var(--colors-iconsSecondary);
+  animation: scaleAnimation 1s infinite;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
